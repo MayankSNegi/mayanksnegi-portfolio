@@ -8,7 +8,7 @@ const education = [
     institution: "Manav Rachna University",
     duration: "2023 – 2027",
     score: "CGPA: 8.8",
-    marksheet: "/BTech_Marksheet.pdf",
+    marksheet: "/certificates/mayank_singh_negi_btech_marksheets.pdf",
   },
   {
     id: "class-xii",
@@ -16,7 +16,7 @@ const education = [
     institution: "Vidya Mandir Public School",
     duration: "2022 – 2023",
     score: "Percentage: 83.6%",
-    marksheet: "/Class_12_Marksheet.pdf",
+    marksheet: "/certificates/mayank_singh_negi_12marksheet.pdf",
   },
   {
     id: "class-x",
@@ -24,7 +24,7 @@ const education = [
     institution: "Vidya Mandir Public School",
     duration: "2020 – 2021",
     score: "Percentage: 91.4%",
-    marksheet: "/Class_10_Marksheet.pdf",
+    marksheet: "/certificates/mayank_singh_negi_10marksheet.pdf",
   },
 ];
 

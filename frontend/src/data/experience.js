@@ -1,7 +1,5 @@
 // Work experience — data-driven, consumed by ExperienceTimeline.jsx.
-// Add Internship 3, 4, 5... or full-time roles here without changing
-// the timeline component itself.
-
+// Add Internship 3, 4, 5... or full-time roles here without changing the timeline component itself.
 const experience = [
   {
     id: "Astrea-2026",
@@ -14,7 +12,7 @@ const experience = [
     "Developed an Employee Leave Management System using Python, Flask, MySQL, HTML5, CSS3, and JavaScript.",
     "Implemented employee leave management functionality with a web-based interface and MySQL database integration."
     ],
-    certificate: "/Astrea_Internship_Certificate.pdf",
+    certificate: "/certificates/mayank_singh_negi_astrea_internship_certificate.pdf",
   },
   {
     id: "technohacks-2025",
@@ -31,7 +29,7 @@ const experience = [
       "Worked on backend optimization",
       "Used Git for version control",
     ],
-    certificate:"/Astrea_Internship_Certificate.pdf",
+    certificate:"/certificates/mayank_singh_negi_technohacks_Internship_Certificate.pdf",
   },
 ];
 
