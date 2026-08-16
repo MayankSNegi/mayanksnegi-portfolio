@@ -1,0 +1,24 @@
+.achievement-section {
+  margin-bottom: 48px;
+}
+
+.achievement-section:last-child {
+  margin-bottom: 0;
+}
+
+.achievement-section__title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.achievement-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}

@@ -1,0 +1,70 @@
+/*
+  Design tokens.
+  Palette: warm paper / deep ink for light mode, charcoal / soft white for dark.
+  Accent: restrained cobalt blue, used sparingly (links, focus rings, key CTAs).
+  Type: Space Grotesk (display) + Inter (body) + JetBrains Mono (labels/code).
+*/
+
+:root {
+  /* Light theme (default) */
+  --background: #f7f6f2;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --text-primary: #14181f;
+  --text-secondary: #55606f;
+  --text-tertiary: #8891a0;
+  --accent: #3454d1;
+  --accent-strong: #253a9e;
+  --accent-soft: rgba(52, 84, 209, 0.1);
+  --border: #e2e1da;
+  --border-strong: #cbcac1;
+  --success: #1e7a4c;
+  --error: #c0392b;
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 24, 31, 0.06);
+  --shadow-md: 0 6px 20px rgba(20, 24, 31, 0.08);
+
+  --max-width: 1140px;
+  --nav-height: 72px;
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}
+
+[data-theme="dark"] {
+  --background: #0f1115;
+  --surface: #161922;
+  --surface-raised: #1c2029;
+  --text-primary: #eef0f4;
+  --text-secondary: #a6adba;
+  --text-tertiary: #6b7385;
+  --accent: #6d8dff;
+  --accent-strong: #8fa6ff;
+  --accent-soft: rgba(109, 141, 255, 0.14);
+  --border: #262b36;
+  --border-strong: #333a48;
+  --success: #4cbe86;
+  --error: #ef6a5a;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

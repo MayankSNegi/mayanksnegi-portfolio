@@ -1,0 +1,35 @@
+.contact-page__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-page__aside-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 26px;
+}
+
+.contact-page__aside-card h3 {
+  margin-bottom: 10px;
+}
+
+.contact-page__aside-card p {
+  margin-bottom: 20px;
+  font-size: 0.94rem;
+}
+
+.contact-page__email {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .contact-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

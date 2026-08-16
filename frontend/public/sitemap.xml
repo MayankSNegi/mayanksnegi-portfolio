@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/experience</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/projects</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/projects/employee-leave-management</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/projects/mentalglow-ai</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/projects/weather-app</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/projects/web-scraper</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/achievements</loc></url>
+  <url><loc>YOUR_DEPLOYED_DOMAIN_HERE/contact</loc></url>
+</urlset>

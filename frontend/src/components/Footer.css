@@ -1,0 +1,38 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 48px 0 24px;
+  margin-top: 80px;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 28px;
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.footer__tagline {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}

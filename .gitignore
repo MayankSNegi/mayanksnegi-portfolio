@@ -1,0 +1,21 @@
+# Environment variables (NEVER commit secrets)
+.env
+frontend/.env
+backend/.env
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+
+# Python
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
