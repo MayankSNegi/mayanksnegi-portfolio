@@ -11,6 +11,7 @@
 
 .section-header .eyebrow {
   margin-bottom: 10px;
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .section-header h2 {

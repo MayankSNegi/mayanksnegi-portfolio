@@ -5,10 +5,12 @@
   font-size: 0.88rem;
   color: var(--text-secondary);
   margin-bottom: 28px;
+  transition: text-shadow 0.3s ease;
 }
 
 .project-detail__back:hover {
   color: var(--accent);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .project-detail__header {
@@ -18,6 +20,7 @@
 
 .project-detail__header .eyebrow {
   margin-bottom: 10px;
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .project-detail__header h1 {
@@ -38,6 +41,11 @@
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   color: var(--text-secondary);
+  transition: text-shadow 0.3s ease;
+}
+.project-detail__tech li:hover {
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+  cursor: default;
 }
 
 .project-detail__cta {

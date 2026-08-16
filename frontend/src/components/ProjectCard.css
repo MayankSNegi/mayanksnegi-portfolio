@@ -57,6 +57,11 @@
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   color: var(--text-secondary);
+  transition: text-shadow 0.3s ease;
+}
+.project-card__tags li:hover {
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+  cursor:default;
 }
 
 .project-card__actions {
@@ -74,6 +79,11 @@
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--accent);
+  transition: text-shadow 0.3s ease;
+}
+.project-card__link:hover {
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+
 }
 
 .project-card__icons {
@@ -90,10 +100,11 @@
   border-radius: 50%;
   border: 1px solid var(--border-strong);
   color: var(--text-secondary);
-  transition: color var(--transition-fast), border-color var(--transition-fast);
+  transition: color var(--transition-fast), border-color var(--transition-fast), filter 0.3s ease;
 }
 
 .project-card__icon-btn:hover {
   color: var(--accent);
   border-color: var(--accent);
+  filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor) drop-shadow(0 0 40px currentColor);
 }

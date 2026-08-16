@@ -25,6 +25,13 @@
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   color: var(--text-secondary);
+  transition: text-shadow 0.3s ease;
+}
+.about__interest-chip:hover {
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+  cursor:default;
 }
 
 .about__highlights {

@@ -100,11 +100,12 @@
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--accent);
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast),text-shadow 0.3s ease;
 }
 
 .exp__certificate:hover {
   color: var(--accent-strong);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 @media (max-width: 640px) {

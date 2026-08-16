@@ -19,6 +19,7 @@
   font-weight: 600;
   margin-bottom: 7px;
   color: var(--text-primary);
+  
 }
 
 .contact-form__field input,
@@ -62,11 +63,13 @@
   color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast),text-shadow 0.3s ease;
 }
 
 .contact-form__submit:hover:not(:disabled) {
   background: var(--accent-strong);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+
 }
 
 .contact-form__submit:disabled {

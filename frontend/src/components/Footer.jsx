@@ -18,7 +18,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer__bottom">
-        <p>© {year} {siteConfig.name}</p>
+        <p className="footer__built-with">© {year} {siteConfig.name}</p>
         <p className="footer__built-with">Built with ❤️</p>
       </div>
     </footer>

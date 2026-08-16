@@ -26,12 +26,16 @@
 
 .navbar__brand {
   position: relative;
-  left: -20px;
+  left: -50px;
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   color: var(--text-primary);
+  transition: text-shadow 0.3s ease;
+}
+.navbar__brand:hover {
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .navbar__links {
@@ -47,16 +51,19 @@
   font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: color var(--transition-fast), background var(--transition-fast);
+  transition: color var(--transition-fast), background var(--transition-fast),text-shadow 0.3s ease;
 }
 
 .navbar__link:hover {
   color: var(--text-primary);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .navbar__link--active {
   color: var(--accent);
   background: var(--accent-soft);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+
 }
 
 .navbar__resume-mobile {
@@ -78,6 +85,7 @@
 
 .navbar__resume:hover {
   background: var(--accent-strong);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .navbar__actions {

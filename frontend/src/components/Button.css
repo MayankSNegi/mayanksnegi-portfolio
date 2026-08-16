@@ -21,29 +21,35 @@
 .btn--primary {
   background: var(--accent);
   color: #ffffff;
+  transition: text-shadow 0.3s ease;
 }
 
 .btn--primary:hover:not(:disabled) {
   background: var(--accent-strong);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .btn--secondary {
   background: transparent;
   color: var(--text-primary);
   border-color: var(--border-strong);
+  transition: text-shadow 0.3s ease;
 }
 
 .btn--secondary:hover:not(:disabled) {
   border-color: var(--accent);
   color: var(--accent);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .btn--ghost {
   background: transparent;
   color: var(--text-secondary);
   padding: 8px 14px;
+  transition: text-shadow 0.3s ease;
 }
 
 .btn--ghost:hover:not(:disabled) {
   color: var(--accent);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }

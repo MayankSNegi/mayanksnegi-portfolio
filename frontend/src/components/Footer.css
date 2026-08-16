@@ -36,3 +36,10 @@
   color: var(--text-tertiary);
   font-family: var(--font-mono);
 }
+.footer__built-with{
+  transition: text-shadow 0.3s ease;
+}
+.footer__built-with:hover{
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+  cursor: default;
+}

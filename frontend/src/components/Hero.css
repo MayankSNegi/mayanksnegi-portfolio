@@ -11,6 +11,7 @@
 
 .hero__content .eyebrow {
   margin-bottom: 14px;
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .hero__content h1 {
@@ -22,6 +23,7 @@
   font-size: 1.02rem;
   color: var(--accent);
   margin-bottom: 18px;
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
 }
 
 .hero__intro {
@@ -50,11 +52,13 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast),text-shadow 0.3s ease;
 }
 
 .hero__social-link:hover {
   color: var(--accent);
+  text-shadow: 0 0 10px currentColor,0 0 20px currentColor, 0 0 40px currentColor;
+
 }
 
 .hero__photo-wrap {

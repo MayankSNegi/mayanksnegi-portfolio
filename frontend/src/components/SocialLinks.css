@@ -14,11 +14,12 @@
   border: 1px solid var(--border-strong);
   color: var(--text-secondary);
   transition: border-color var(--transition-fast), color var(--transition-fast),
-    transform var(--transition-fast);
+    transform var(--transition-fast), filter 0.3s ease;
 }
 
 .social-links__item:hover {
   color: var(--accent);
   border-color: var(--accent);
   transform: translateY(-2px);
+  filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor) drop-shadow(0 0 40px currentColor);
 }

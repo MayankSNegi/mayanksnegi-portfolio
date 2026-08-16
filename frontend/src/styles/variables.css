@@ -1,25 +1,30 @@
 /*
   Design tokens.
-  Palette: warm paper / deep ink for light mode, charcoal / soft white for dark.
-  Accent: restrained cobalt blue, used sparingly (links, focus rings, key CTAs).
+  Palette: warm ivory / deep ink for light mode, charcoal / soft white for dark.
+  Accent: muted bronze, used sparingly for links, focus rings, active states, and key CTAs.
   Type: Space Grotesk (display) + Inter (body) + JetBrains Mono (labels/code).
 */
 
 :root {
   /* Light theme (default) */
-  --background: #f7f6f2;
+  --background: #f5f3ee;
   --surface: #ffffff;
-  --surface-raised: #ffffff;
-  --text-primary: #14181f;
-  --text-secondary: #55606f;
-  --text-tertiary: #8891a0;
-  --accent: #3454d1;
-  --accent-strong: #253a9e;
-  --accent-soft: rgba(52, 84, 209, 0.1);
-  --border: #e2e1da;
-  --border-strong: #cbcac1;
-  --success: #1e7a4c;
-  --error: #c0392b;
+  --surface-raised: #faf9f6;
+
+  --text-primary: #181817;
+  --text-secondary: #62615d;
+  --text-tertiary: #8b8a84;
+
+  /* Muted bronze accent */
+  --accent: #9a642a;
+  --accent-strong: #7e4f20;
+  --accent-soft: rgba(154, 100, 42, 0.09);
+
+  --border: #dedbd3;
+  --border-strong: #c9c5bb;
+
+  --success: #3f7654;
+  --error: #b84a3a;
 
   --font-display: "Space Grotesk", "Inter", sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -29,8 +34,8 @@
   --radius-md: 10px;
   --radius-lg: 16px;
 
-  --shadow-sm: 0 1px 2px rgba(20, 24, 31, 0.06);
-  --shadow-md: 0 6px 20px rgba(20, 24, 31, 0.08);
+  --shadow-sm: 0 1px 2px rgba(24, 24, 23, 0.05);
+  --shadow-md: 0 6px 20px rgba(24, 24, 23, 0.07);
 
   --max-width: 1140px;
   --nav-height: 72px;
@@ -40,22 +45,27 @@
 }
 
 [data-theme="dark"] {
-  --background: #0f1115;
-  --surface: #161922;
-  --surface-raised: #1c2029;
-  --text-primary: #eef0f4;
-  --text-secondary: #a6adba;
-  --text-tertiary: #6b7385;
-  --accent: #6d8dff;
-  --accent-strong: #8fa6ff;
-  --accent-soft: rgba(109, 141, 255, 0.14);
-  --border: #262b36;
-  --border-strong: #333a48;
-  --success: #4cbe86;
-  --error: #ef6a5a;
+  --background: #0d0f0e;
+  --surface: #151715;
+  --surface-raised: #1b1d1b;
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --text-primary: #f1efe9;
+  --text-secondary: #a6a49d;
+  --text-tertiary: #777871;
+
+  /* Muted bronze accent */
+  --accent: #c69a5e;
+  --accent-strong: #d4ab70;
+  --accent-soft: rgba(198, 154, 94, 0.12);
+
+  --border: #292b29;
+  --border-strong: #393c39;
+
+  --success: #63a77a;
+  --error: #df6a58;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.38);
 }
 
 @media (prefers-reduced-motion: reduce) {
