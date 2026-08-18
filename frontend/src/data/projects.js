@@ -1,5 +1,9 @@
 // Projects — data-driven, consumed by Projects.jsx and ProjectDetail.jsx.
 // Add Project 5, 6... here without changing any UI component.
+import elm1 from "../assets/projects/elm1.png";
+import elm2 from "../assets/projects/elm2.png";
+import elm3 from "../assets/projects/elm3.png";
+import elm4 from "../assets/projects/elm4.png";
 import mentalglow1 from "../assets/projects/mentalglow-1.png";
 import mentalglow2 from "../assets/projects/mentalglow-2.png";
 import mentalglow3 from "../assets/projects/mentalglow-3.png";
@@ -9,22 +13,22 @@ import webscraper1 from "../assets/projects/webscraper-1.png";
 import webscraper2 from "../assets/projects/webscraper-2.png";
 const projects = [
   {
-    id: "employee-leave-management",
-    title: "Employee Leave Management",
-    tagline: "Web-based employee leave management system",
-    shortDescription: "A full-stack web application for managing employee leave requests and records.",
-    detailedDescription: "Developed an Employee Leave Management System using Python, Flask, MySQL, HTML5, CSS3, and Vanilla JavaScript.",
-    problem: "Managing employee leave requests manually can be time-consuming and difficult to track.",
-    solution: "Built a centralized web application that allows leave requests and employee leave records to be managed through a structured interface.",
-    technologies: ["Python","Flask","MySQL","HTML5","CSS3","Vanilla JavaScript"],
-    features: ["Employee leave request management","Leave record tracking","MySQL database integration","Web-based user interface"],
-    myContribution:"Designed and developed the application using Flask, MySQL, HTML5, CSS3, and JavaScript.",
-    architecture:"Frontend (HTML, CSS, JavaScript) → Flask backend → MySQL database",
-    githubUrl: "",
-    liveUrl: "",
-    image: "",
-    screenshots: []
+  id: "employee-leave-management",
+  title: "Employee Leave Management System",
+  tagline: "Full-Stack Employee Leave Management Web Application",
+  shortDescription:"A full-stack employee leave management system built with Flask and MySQL that enables employees to apply for and track leave while administrators manage and review leave requests.",
+  detailedDescription:"Employee Leave Management System is a role-based full-stack web application designed to digitize the employee leave management process. Employees can register, securely log in, apply for different types of leave, track request status, cancel pending requests, and update their profiles. Administrators can monitor company-wide leave activity, review employee requests, approve or reject applications, filter requests, and view employee leave statistics.",
+  problem:"Traditional employee leave processes often rely on manual forms, emails, spreadsheets, or disconnected systems, making it difficult for employees to track requests and for administrators to efficiently manage approvals and maintain an overview of leave activity.",
+  solution:"A centralized web application provides separate employee and administrator workflows. Employees can submit and track leave requests through a dedicated dashboard, while administrators can review, filter, approve, or reject requests through an administrative dashboard connected to a MySQL database.",technologies: ["Python","Flask","MySQL","HTML5","CSS3","JavaScript","Jinja2","Werkzeug"],
+  features: ["Employee registration and secure login","Role-based employee and administrator access","Employee dashboard with leave statistics","Apply for Casual, Sick, Earned, Emergency, and Unpaid Leave","Leave date and reason validation","Leave history with status and administrator comments","Cancel pending leave requests","Employee profile management","Administrator dashboard with company-wide statistics","Review and manage employee leave requests","Approve or reject leave applications","Required comments when rejecting requests","Filter leave requests by status and department","View registered employees and leave counts","Password hashing using Werkzeug","Parameterized SQL queries for safer database operations"],
+  myContribution:"Designed and developed the complete application, including the Flask backend, MySQL database, authentication and role-based authorization, employee and administrator workflows, leave-management business logic, server-rendered Jinja2 templates, responsive CSS styling, client-side JavaScript functionality, database integration, validation, and security implementation.",
+  architecture:"Browser → Flask Application → Authentication & Business Logic → MySQL Database → Jinja2 Templates → HTML/CSS/JavaScript response.",
+  githubUrl: "https://github.com/MayankSNegi/employee-leave-management",
+  liveUrl: "",
+  image: "elm1",
+  screenshots: [elm1,elm2,elm3,elm4,],
   },
+  
   {
     id: "mentalglow-ai",
     title: "MentalGlow-AI",

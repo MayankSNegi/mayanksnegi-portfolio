@@ -46,6 +46,14 @@
   border-color: var(--error);
 }
 
+.contact-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-form__error {
   color: var(--error);
   font-size: 0.8rem;

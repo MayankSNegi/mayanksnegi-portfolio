@@ -10,6 +10,7 @@ const INITIAL_FORM = {
   company: "",
   subject: "",
   message: "",
+  website: "",
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -185,6 +186,22 @@ export default function ContactForm() {
             {errors.message}
           </p>
         )}
+      </div>
+
+      <div
+        className="contact-form__honeypot"
+        aria-hidden="true"
+      >
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          value={form.website}
+          onChange={handleChange}
+          tabIndex="-1"
+          autoComplete="off"
+        />
       </div>
 
       <button type="submit" className="contact-form__submit" disabled={isSubmitting}>
