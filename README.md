@@ -3,8 +3,6 @@
 > A modern, responsive, full-stack developer portfolio built to showcase my projects, technical skills, education, experience, achievements, research work, and contact information.
 
 **Live Portfolio:** [mayanksnegi-portfolio.netlify.app](https://mayanksnegi-portfolio.netlify.app)
-**GitHub:** [github.com/mayanksnegi](https://github.com/mayanksnegi)
-**LinkedIn:** [linkedin.com/in/mayanksnegi](https://linkedin.com/in/mayanksnegi)
 
 ---
 
