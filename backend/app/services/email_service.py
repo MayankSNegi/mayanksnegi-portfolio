@@ -32,7 +32,7 @@ def _build_html_body(data: ContactRequest) -> str:
     return f"""
     <html>
       <body style="font-family: Arial, sans-serif; color: #14181f;">
-        <h2>New portfolio contact form submission</h2>
+        <h2>New Message from Your Portfolio</h2>
         <p><strong>Name:</strong> {data.full_name}</p>
         <p><strong>Email:</strong> {data.email}</p>
         <p><strong>Phone:</strong> {data.phone or '-'}</p>
@@ -65,9 +65,9 @@ def send_contact_email(data: ContactRequest, settings: Settings) -> None:
     resend.api_key = settings.RESEND_API_KEY
 
     params = {
-        "from": settings.RESEND_FROM_EMAIL,
+        "from": f"Portfolio Contact <{settings.RESEND_FROM_EMAIL}>",
         "to": [settings.CONTACT_RECEIVER_EMAIL],
-        "subject": f"[Portfolio Contact] {data.subject}",
+        "subject": f"[Portfolio] {data.subject}",
         "text": _build_text_body(data),
         "html": _build_html_body(data),
         "reply_to": data.email,
