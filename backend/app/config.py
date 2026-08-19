@@ -16,11 +16,9 @@ class Settings(BaseSettings):
     # Contact form recipient
     CONTACT_RECEIVER_EMAIL: str = ""
 
-    # SMTP configuration
-    SMTP_HOST: str = ""
-    SMTP_PORT: int = 587
-    SMTP_USERNAME: str = ""
-    SMTP_PASSWORD: str = ""
+    # Resend email configuration
+    RESEND_API_KEY: str = ""
+    RESEND_FROM_EMAIL: str = "onboarding@resend.dev"
 
     # Basic anti-spam
     RATE_LIMIT_MAX_REQUESTS: int = 3

@@ -1,14 +1,12 @@
 """
 Email delivery service.
 
-Sends contact form submissions to CONTACT_RECEIVER_EMAIL using SMTP
-(e.g. Gmail with an App Password). All credentials come from environment
-variables — never hard-code them here.
+Sends contact form submissions to CONTACT_RECEIVER_EMAIL using the
+Resend Email API. All credentials come from environment variables —
+never hard-code them here.
 """
 
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+import resend
 
 from app.config import Settings
 from app.schemas.contact import ContactRequest
@@ -18,15 +16,9 @@ class EmailDeliveryError(Exception):
     """Raised when the email could not be sent."""
 
 
-def _build_message(data: ContactRequest, settings: Settings) -> MIMEMultipart:
-    message = MIMEMultipart("alternative")
-    message["Subject"] = f"[Portfolio Contact] {data.subject}"
-    message["From"] = settings.SMTP_USERNAME
-    message["To"] = settings.CONTACT_RECEIVER_EMAIL
-    message["Reply-To"] = data.email
-
-    text_body = (
-        f"New message from your portfolio contact form\n\n"
+def _build_text_body(data: ContactRequest) -> str:
+    return (
+        "New message from your portfolio contact form\n\n"
         f"Name: {data.full_name}\n"
         f"Email: {data.email}\n"
         f"Phone: {data.phone or '-'}\n"
@@ -35,7 +27,9 @@ def _build_message(data: ContactRequest, settings: Settings) -> MIMEMultipart:
         f"Message:\n{data.message}\n"
     )
 
-    html_body = f"""
+
+def _build_html_body(data: ContactRequest) -> str:
+    return f"""
     <html>
       <body style="font-family: Arial, sans-serif; color: #14181f;">
         <h2>New portfolio contact form submission</h2>
@@ -50,14 +44,10 @@ def _build_message(data: ContactRequest, settings: Settings) -> MIMEMultipart:
     </html>
     """
 
-    message.attach(MIMEText(text_body, "plain"))
-    message.attach(MIMEText(html_body, "html"))
-    return message
-
 
 def send_contact_email(data: ContactRequest, settings: Settings) -> None:
     """
-    Sends the contact form data via SMTP.
+    Sends the contact form data via the Resend Email API.
 
     Raises EmailDeliveryError if the email service is not configured
     or if sending fails, so the route layer can return a safe,
@@ -65,24 +55,25 @@ def send_contact_email(data: ContactRequest, settings: Settings) -> None:
     """
     if not all(
         [
-            settings.SMTP_HOST,
-            settings.SMTP_USERNAME,
-            settings.SMTP_PASSWORD,
+            settings.RESEND_API_KEY,
+            settings.RESEND_FROM_EMAIL,
             settings.CONTACT_RECEIVER_EMAIL,
         ]
     ):
         raise EmailDeliveryError("Email service is not configured.")
 
-    message = _build_message(data, settings)
+    resend.api_key = settings.RESEND_API_KEY
+
+    params = {
+        "from": settings.RESEND_FROM_EMAIL,
+        "to": [settings.CONTACT_RECEIVER_EMAIL],
+        "subject": f"[Portfolio Contact] {data.subject}",
+        "text": _build_text_body(data),
+        "html": _build_html_body(data),
+        "reply_to": data.email,
+    }
 
     try:
-        with smtplib.SMTP(settings.SMTP_HOST, settings.SMTP_PORT) as server:
-            server.starttls()
-            server.login(settings.SMTP_USERNAME, settings.SMTP_PASSWORD)
-            server.sendmail(
-                settings.SMTP_USERNAME,
-                settings.CONTACT_RECEIVER_EMAIL,
-                message.as_string(),
-            )
+        resend.Emails.send(params)
     except Exception as exc:  # noqa: BLE001 - convert to a safe, generic error
         raise EmailDeliveryError("Failed to send email.") from exc

@@ -72,7 +72,7 @@ The portfolio follows a **data-driven architecture**, allowing content such as p
 * Fully functional contact form
 * React frontend
 * FastAPI backend
-* SMTP-based email delivery
+* Resend API-based email delivery
 * Frontend and backend validation
 * Honeypot anti-spam protection
 * Basic rate limiting
@@ -124,7 +124,7 @@ The portfolio follows a **data-driven architecture**, allowing content such as p
 * **FastAPI**
 * **Pydantic**
 * **Uvicorn**
-* **SMTP / `smtplib`**
+* **Resend Email API**
 
 ## Development Tools
 
@@ -252,7 +252,7 @@ The portfolio uses a simple frontend/backend architecture:
                                │
                                ▼
                     ┌─────────────────────┐
-                    │    SMTP Service     │
+                    │  Resend Email API   │
                     └──────────┬──────────┘
                                │
                                ▼
@@ -401,10 +401,9 @@ Example structure:
 FRONTEND_URL=http://localhost:5173
 
 CONTACT_RECEIVER_EMAIL=
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USERNAME=
-SMTP_PASSWORD=
+
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=onboarding@resend.dev
 ```
 
 Start the FastAPI server:
@@ -448,9 +447,9 @@ FastAPI
   └── Duplicate submission protection
   │
   ▼
-SMTP Email Service
-  │
-  ▼
+Resend Email API
+        │
+        ▼
 Configured Email Inbox
 ```
 
@@ -478,7 +477,7 @@ Used to verify that the backend is running.
 POST /api/contact
 ```
 
-Accepts contact-form submissions and sends them through the configured SMTP service.
+Accepts contact-form submissions and sends them through the Resend Email API.
 
 ### API Documentation
 
@@ -566,12 +565,11 @@ Do not commit:
 ```text
 .env
 *.env
-SMTP_PASSWORD
 API keys
 private credentials
 ```
 
-The actual production SMTP credentials belong only in the deployment platform's environment-variable configuration.
+The actual Resend API key belongs only in the deployment platform's environment-variable configuration.
 
 ---
 
